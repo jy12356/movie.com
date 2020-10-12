@@ -1,0 +1,66 @@
+/* Container */
+
+	body {
+		/* min-width: (containers) */
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.container {
+		margin-left: auto !important;
+		margin-right: auto;
+		/* width: (containers) */
+		width: 1290px;
+	}
+	.sub {
+		/* width: 1400px; */
+	}
+
+/* Grid */
+
+	.\31 2u { width: 100% }
+	.\31 1u { width: 91.6666666667% }
+	.\31 0u { width: 83.3333333333% }
+	.\39 u { width: 75% }
+	.\38 u { width: 66.6666666667% }
+	.\37 u { width: 58.3333333333% }
+	.\36 u { width: 50% }
+	.\35 u { width: 41.6666666667% }
+	.\34 u {width: 25%;}
+	.\33 u { width: 25% }
+	.\32 u { width: 16.6666666667% }
+	.\31 u { width: 8.3333333333% }
+	.\-11u { margin-left: 91.6666666667% }
+	.\-10u { margin-left: 83.3333333333% }
+	.\-9u { margin-left: 75% }
+	.\-8u { margin-left: 66.6666666667% }
+	.\-7u { margin-left: 58.3333333333% }
+	.\-6u { margin-left: 50% }
+	.\-5u { margin-left: 41.6666666667% }
+	.\-4u { margin-left: 33.3333333333% }
+	.\-3u { margin-left: 25% }
+	.\-2u { margin-left: 16.6666666667% }
+	.\-1u { margin-left: 8.3333333333% }
+
+
+/*sjy 추가*/
+.pl0{padding-left:0 !important;}
+ h2.h2{padding: 10px 0 15px;font-size:1.8em;font-weight: 600;letter-spacing: 0.5px;}
+ .logo{}
+ .logo img{padding-top: 7px;}
+ .bx-wrapper{position:relative;}
+.bx-prev{position: absolute;top: 40%;right: -30px;transform: translateY(-50%);box-shadow: 0 7px 7px rgb(0 0 0 / 8%);width: 50px;height: 50px;background: url(../images/arrorw_l.jpg) no-repeat;}
+.bx-next{position: absolute;top: 40%;left: -10px;transform: translateY(-50%);width: 50px;height: 50px;background: url(../images/arrorw_r.jpg) no-repeat;box-shadow: 0 7px 7px rgb(0 0 0 / 8%);}
+.numl{position: absolute;top: 11px;left: 11px;display: block;width: 30px;height: 30px;line-height: 30px;font-size: 17px;font-weight: 500;color: #fff;text-align: center;background: rgb(0 0 0 / 64%);border-radius: 10%;}
+.mvChoiceBox{height: 530px;}
+.mvChoiceBox .special{position:relative;display: block;height: 360px;}
+.mvChoiceBox .special img{border-radius: 1%; width: 100%; height: 100%;}
+.mvChoiceBox .mcnt{padding-top: 13px;}
+.mvChoiceBox .mcnt .mnTit{color: #292a32;font-size: 20px;font-weight: 900;letter-spacing: -0.1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.mvChoiceBox  .mcnt .yn{}
+.mvChoiceBox  .mcnt .like{}
+
+@media all and (max-width: 1300px){
+
+}
+         
+            
