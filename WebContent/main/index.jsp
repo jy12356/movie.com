@@ -56,12 +56,12 @@
 						    	String openDate = gb.getOpenDate().substring(0,4);
 						    %>
 						   <div class="4u mvChoiceBox">
-								<a href="gView.jsp?num=<%=gb.getNum()%>" title="상세보기"class="special">
+								<a href="../gallery/gView.jsp?num=<%=gb.getNum()%>" title="상세보기"class="special">
 									<span class="numl"><%=i+1 %></span>
 									<img alt="" src="../images/<%=gb.getThumImg()%>">
 								</a>
 								<div class="mcnt">
-									<a href="gView.jsp?num=<%=gb.getNum()%>" title="상세보기"><span class="mnTit"><%=gb.getTitle()%></span></a>
+									<a href="../gallery/gView.jsp?num=<%=gb.getNum()%>" title="상세보기"><span class="mnTit"><%=gb.getTitle()%></span></a>
 									<p class="yn"><%=openDate%> · <%=gb.getGenre() %></p>
 									<p class="like"><img src="../images/ico_heart.gif" alt="추천"><a href="" title="추천">추천수</a> <%=gb.getRecommend()%></p>
 								</div>

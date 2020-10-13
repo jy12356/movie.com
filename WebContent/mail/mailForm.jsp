@@ -29,8 +29,8 @@ String id = (String)session.getAttribute("id");
 		            <tbody>
 		            	<tr>
 		                    <th scope="row"><label for="receiver"><span class="c_red">*</span>받는사람</label></th>
-		                    <td>
-		                        <input type="text" name="receiver" id="receiver" class="input_v2"required="required">
+		                    <td class="readron">
+		                        <input type="text" name="receiver" id="receiver" class="input_v2"value="sjy9061@naver.com" readonly="readonly">
 		                    </td>
 		                </tr>
 		                <tr>

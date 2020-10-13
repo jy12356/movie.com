@@ -56,7 +56,7 @@
 					pass1.focus();
 					return false;
 				}
-				if(pass1.value.length >= 25 || pass1.value.length <= 8 ){
+				if(pass1.value.length >= 15 || pass1.value.length <= 7 ){
 					alert("패스워드는 8자 이상 25자이하로 입력해주세요.");
 					pass1.focus();
 					return false;

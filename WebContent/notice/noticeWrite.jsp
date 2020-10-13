@@ -62,7 +62,7 @@ if(id.equals("admin")){
 		                </tr>
 		                <tr>
 		                    <th scope="row"><label for="writer"><span class="c_red">*</span>작 성 자</label></th>
-		                    <td>
+		                    <td class="readron">
 		                        <input type="text" name="writer" id="writer" class="input_v2" value="<%=id %>" readonly="readonly" >
 		                    </td>
 		                    <th scope="row"><label for="pw"><span class="c_red">*</span>비밀번호</label></th>
