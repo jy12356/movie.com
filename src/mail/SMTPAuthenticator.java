@@ -5,7 +5,7 @@ import javax.mail.PasswordAuthentication;
 public class SMTPAuthenticator  extends Authenticator{
 	PasswordAuthentication passAuth;
     public SMTPAuthenticator(){
-        passAuth = new PasswordAuthentication("jiyeon9061","poajzighmuzormru");
+        passAuth = new PasswordAuthentication("jiyeon9061","ynnq fxsf xava nifq");
     }
 	@Override
 	protected PasswordAuthentication getPasswordAuthentication() {
