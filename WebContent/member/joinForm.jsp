@@ -134,10 +134,28 @@
 					jf.id.focus();
 					return;
 				}
-				var wid=document.jf.id.value;
-				window.open("idChkForm.jsp?wid="+wid,"","width=1000,height=400");
+// 				var wid=document.jf.id.value;
+// 				window.open("idChkForm.jsp?wid="+wid,"","width=1000,height=400");
 			}
-			
+			$(document).ready(function(){
+				$('#idChk').click(function(){
+					$.ajax('idChkForm2.jsp',{
+						data : {
+							id: $('#id').val(),
+							idChkn : $('#idChkn').val()
+						},
+						success:function(rdata){
+							var result = rdata.json;
+							alert(rdata);
+							$('.idChkRe').addClass("on");
+							$('.idChkRe').html(rdata);
+							if(rdata.contain("사용가능 한 ID")){
+								$('#idChkn').val() = 1;
+							}
+						}
+					});
+				});
+			});
 		</script>
 	    <div class="login_area">
 	        <form name ="jf" class="login_form" action="joinPro.jsp" method="post" onsubmit="return validate();" >
@@ -153,8 +171,9 @@
 	                       <label for="id" class="blind">아이디</label>
 	                       <p class="idForm">
 	                       		<input type="text" id="id" name="id" title="아이디" placeholder="아이디" >
-	                       		<input type="hidden" name="idChkn" value="0">                
-	                       		<input type="button" title="중복확인" onclick="openIdChk();" value="중복확인">        
+	                       		<input type="hidden" id="idChkn" value="0">                
+	                       		<input type="button" title="중복확인" id="idChk" value="중복확인">        
+	                       		<span class="idChkRe"></span>
 	                       </p> 
 	                       <label for="pass1" class="blind">비밀번호</label>
 	                       <p><input type="password" id="pass1" name="pass" title="비밀번호" placeholder="비밀번호"></p>
