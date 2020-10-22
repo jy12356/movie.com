@@ -47,13 +47,17 @@
 				var movieNm = $(this).find('movieNm').text();
 				var openDt = $(this).find('openDt').text();
 				var audiAcc = $(this).find('audiAcc').text();
-				$('#mvChart .mvChoiceBox ul').append(
-						"<li>"+rnum+"</li>"+
-						"<li>"+rank+"</li>"+
-						"<li>"+movieNm+"</li>"+
-						"<li>"+openDt+"</li>"+
-						"<li>"+audiAcc+"</li>"
-					
+				$('#mvChart').append(
+						'<div class="4u mvChoiceBox bx-clone" style="float: left; list-style: none; position: relative; width: 250px; margin-right: 10px;">'+
+						'<a href="../gallery/gView.jsp?num='+rnum+' title="상세보기" class="special">'+
+						'<span class="numl">'+rank+'</span>'+
+						'<img alt="" src="../images/'+rank+'">'+
+						'</a>'+
+						'<div class="mcnt">'+
+							'<a href="../gallery/gView.jsp?num='+rnum+ 'title="상세보기"><span class="mnTit">'+movieNm+'</span></a>'+
+							'<p class="yn">'+openDt+'</p>'+
+							'<p class="like"><img src="../images/ico_heart.gif" alt="추천"><a href="" title="추천">추천수</a></p>'+
+						'</div></div>'
 				);
 			});
         }
@@ -108,9 +112,7 @@
 				<div class="container main">
 					<h2  class="h2">영화순위</h2>
 					<div class="row container mvslider" id="mvChart" >
-						   <div class="4u mvChoiceBox">
-						   		<ul></ul>
-							</div>
+						 
 					</div>		
 				</div>		
 			</section>
