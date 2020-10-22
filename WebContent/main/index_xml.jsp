@@ -28,7 +28,39 @@
     List galleryList = gdao.getGalleryList(startPage, pageSize,search);
     
     %>
-
+ <script type="text/javascript">
+ $(document).ready(function(){
+	 
+	 var d = new Date();
+	 var yy = d.getFullYear();
+	 var mm = d.getMonth() + 1;
+	 var dd = d.getDate() - 1;
+	 var today = yy + "" + "" + mm + "" + dd;
+	 $.ajax({
+		url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=035f57ea2a7ed74187aea9b181e91a95&targetDt='+today,
+		type: 'get',
+        dataType: 'xml',
+		success: function(data) {
+			$(data).find('dailyBoxOffice').each(function(){
+				var rnum = $(this).find('rnum').text();
+				var rank = $(this).find('rank').text();
+				var movieNm = $(this).find('movieNm').text();
+				var openDt = $(this).find('openDt').text();
+				var audiAcc = $(this).find('audiAcc').text();
+				$('#mvChart .mvChoiceBox ul').append(
+						"<li>"+rnum+"</li>"+
+						"<li>"+rank+"</li>"+
+						"<li>"+movieNm+"</li>"+
+						"<li>"+openDt+"</li>"+
+						"<li>"+audiAcc+"</li>"
+					
+				);
+			});
+        }
+	 });
+ })
+	
+</script>
 			<section class="mainVisul">
 				<ul class="mvisulslider">
 					<li>
@@ -72,6 +104,18 @@
 				</div>		
 			</section>
 			
+			<section id="two" class="wrapper style1">
+				<div class="container main">
+					<h2  class="h2">영화순위</h2>
+					<div class="row container mvslider" id="mvChart" >
+						   <div class="4u mvChoiceBox">
+						   		<ul></ul>
+							</div>
+					</div>		
+				</div>		
+			</section>
+
+		
 			<!-- Footer -->
 			<footer id="footer">
 				<div class="container footerInner">
