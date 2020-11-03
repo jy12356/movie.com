@@ -31,13 +31,9 @@
  <script type="text/javascript">
  $(document).ready(function(){
 	 
-	 var d = new Date();
-	 var yy = d.getFullYear();
-	 var mm = d.getMonth() + 1;
-	 var dd = d.getDate() - 1;
-	 var today = yy + "" + "" + mm + "" + dd;
+	 var key = "W65049K473DG5LP6XNE8";
 	 $.ajax({
-		url: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=035f57ea2a7ed74187aea9b181e91a95&targetDt='+today,
+		url: 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_xml2.jsp?ServiceKey='+key,
 		type: 'get',
         dataType: 'xml',
 		success: function(data) {
@@ -54,9 +50,9 @@
 						'<img alt="" src="../images/'+rank+'">'+
 						'</a>'+
 						'<div class="mcnt">'+
-							'<a href="../gallery/gView.jsp?num='+rnum+ 'title="상세보기"><span class="mnTit">'+movieNm+'</span></a>'+
-							'<p class="yn">'+openDt+'</p>'+
-							'<p class="like"><img src="../images/ico_heart.gif" alt="추천"><a href="" title="추천">추천수</a></p>'+
+							'<a href="../gallery/gView.jsp?num='+rnum+ 'title="상세보기"><span class="mnTit">'+title+'</span></a>'+
+							'<p class="yn">'+releaseDate+'</p>'+
+							'<p class="like"><img src="http://file.koreafilm.or.kr/thm/02/00/01/46/'+posterUrl+'" alt="추천"><a href="" title="추천">추천수</a></p>'+
 						'</div></div>'
 				);
 			});

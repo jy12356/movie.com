@@ -216,6 +216,7 @@
 	               </div>
 	               <%if(id.equals("admin")){ %>
               	   	<a class="mListBtn" href="memberList.jsp">회원목록</a>	
+            	   	<a class="mListBtn" href="movieList.jsp">영화목록</a>	
 	               <%}else{%>
 	               	<p class="joinA center">
                     	무비닷컴을 더 이상 이용하지 않는다면? <a href="#" title="회원탈퇴" onclick="delMember()">회원탈퇴</a>

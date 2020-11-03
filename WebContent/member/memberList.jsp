@@ -31,9 +31,9 @@ SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
 	<div id="contents" class="dv_wrap"> 
     	<div class="contit">
         	<div class="loc">
-            	<img src="../images/ico_home.gif" alt="홈"> &gt; <span class="current">글쓰기</span>
+            	<img src="../images/ico_home.gif" alt="홈"> &gt; <span class="current">회원목록</span>
             </div>
-			<h2 class="h2">공지사항</h2>
+			<h2 class="h2">회원목록</h2>
 		</div>
 			<!-- 컨텐츠영역 -->
 		<div class="board">
